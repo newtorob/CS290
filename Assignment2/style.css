@@ -1,0 +1,28 @@
+#outer-content {
+  text-align: left;
+  height: 60px;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f7b7aa;
+}
+
+#inner-content {
+  width: 50%;
+  text-align: center;
+  height: 30px;
+  margin: 10px;
+  background-color: #6e9be5;
+  padding: 10px;
+}
+
+
+.block {
+  display: block;
+}
+
+table > thead > h3 {
+  text-align: center;
+}
