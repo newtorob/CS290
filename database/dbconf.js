@@ -6,10 +6,10 @@ This file is the controller for the server requests
 
 var mysql = require('mysql');
 var pool = mysql.createPool({
-  host  : 'localhost',
-  user  : 'student',
-  password: 'default',
-  database: 'student'
+  host  : 'mysql.cs.orst.edu',
+  user  : 'cs290_newtorob',
+  password: '4180Stanky!',
+  database: 'cs290_newtorob'
 });
 module.exports.pool = pool;
 
