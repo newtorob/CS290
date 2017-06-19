@@ -118,7 +118,7 @@ function getData() {
    });
 }
 
-$(document).ready(function(){
+(document).ready(function(){
    getData();
 
    $('.add-task').on('click', function(e) {
