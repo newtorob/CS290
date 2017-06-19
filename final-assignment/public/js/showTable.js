@@ -1,6 +1,6 @@
 var req = new XMLHttpRequest();
 
-req.open('GET', 'http://52.37.202.83:3000/get');
+req.open('GET', 'http://52.37.202.83:14490/get');
 req.setRequestHeader('Content-Type', 'application/json');
 req.addEventListener('load', function() {
     if (req.status >= 200 && req.status < 400) {
@@ -64,7 +64,7 @@ function buildTable(data) {
                 id: rowId
             };
 
-            req.open('POST', 'http://52.37.202.83:3000/delete');
+            req.open('POST', 'http://52.37.202.83:14490/delete');
             req.setRequestHeader('Content-Type', 'application/json');
             req.addEventListener('load', function() {
                 if (req.status >= 200 && req.status < 400) {
@@ -87,7 +87,7 @@ function buildTable(data) {
         updateButton.className = "update";
         updateButton.onclick = function(){
           var rowId = updateButton.parentNode.parentNode.lastChild.value;
-          location.href = "http://52.37.202.83:3000/updateForm?id="+rowId;
+          location.href = "http://52.37.202.83:14490/updateForm?id="+rowId;
           event.preventDefault();
         };
         newForm.appendChild(updateButton);

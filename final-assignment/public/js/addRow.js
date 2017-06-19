@@ -27,7 +27,7 @@ function addExButton() {
             lbs: checked
         };
 
-        req.open('POST', 'http://52.37.202.83:3000/add');
+        req.open('POST', 'http://52.37.202.83:14490/add');
         req.setRequestHeader('Content-Type', 'application/json');
         req.addEventListener('load', function() {
             if (req.status >= 200 && req.status < 400) {
