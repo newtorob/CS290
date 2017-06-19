@@ -3,7 +3,7 @@ Name: Robert Newton
 CS290 HW Assignment: Database Interactions
 This file is the controller for the server requests
 ***********************************************/
-
+/*
 var mysql = require('mysql');
 var pool = mysql.createPool({
   host  : 'mysql.cs.orst.edu',
@@ -13,3 +13,17 @@ var pool = mysql.createPool({
 });
 module.exports.pool = pool;
 
+*/
+
+
+var mysql = require('mysql');
+var pool = mysql.createPool({
+  connectionLimit: 10,
+  host:'localhost',
+  user:'student',
+  password:'default',
+  database:'student',
+  dateStrings:'true'
+});
+
+module.exports.pool = pool;
