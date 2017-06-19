@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', bindButtons);
 
 var req = new XMLHttpRequest();
-req.open('GET', 'http://52.39.88.179:3000/getall', true);
+req.open('GET', 'http://52.39.88.179:14490/getall', true);
 req.addEventListener('load', function(){
     if (req.status < 400){
         var data = JSON.parse(req.responseText);
@@ -69,7 +69,7 @@ function deleteRow(dltButton) {
     var req = new XMLHttpRequest();
     var payload = {};
     payload.id = dltButton.nextElementSibling.value;
-    req.open("POST", "http://52.39.88.179:3000/delete", true);
+    req.open("POST", "http://52.39.88.179:14490/delete", true);
     req.setRequestHeader('Content-type', 'application/json');
     req.addEventListener('load', function(){
         if (req.status >= 200 && req.status < 400){
@@ -86,7 +86,7 @@ function deleteRow(dltButton) {
 
 function editRow(editButton) {
     var id = editButton.previousElementSibling.value;
-    window.location="http://52.39.88.179:3000/edit?id=" + id;
+    window.location="http://52.39.88.179:14490/edit?id=" + id;
 }
 
 function bindButtons(){
@@ -113,7 +113,7 @@ function bindButtons(){
                 break;
             }
         }
-        req.open("POST", "http://52.39.88.179:3000/insert", true);
+        req.open("POST", "http://52.39.88.179:14490/insert", true);
         req.setRequestHeader('Content-type', 'application/json');
         req.addEventListener('load', function(){
             if (req.status >= 200 && req.status < 400){
