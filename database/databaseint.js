@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 14454);
+app.set('port', 14467);
 
 //Provide the public folder access to the public
 app.use(express.static('public'));
