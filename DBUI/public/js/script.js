@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', getCurrentData);
 document.addEventListener('DOMContentLoaded', bindButtons);
 
-var port = "14490";
+var port = "12037";
 
 function bindButtons(){
 	//Add Value Function:
@@ -19,7 +19,7 @@ function bindButtons(){
 		
 		if(payload.name != ""){
 		//Url for GET request
-		var url = "http://flip3.engr.oregonstate.edu:" + port + "/insert?" + "name=" + payload.name + "&reps=" + payload.reps + "&weight=" + payload.weight + "&date=" + payload.date + "&lbs=" + payload.lbs; 
+		var url = "http://flip2.engr.oregonstate.edu:" + port + "/insert?" + "name=" + payload.name + "&reps=" + payload.reps + "&weight=" + payload.weight + "&date=" + payload.date + "&lbs=" + payload.lbs; 
 		
 	    //Make request
 		req.open("GET", url, false); 
@@ -45,7 +45,7 @@ function bindButtons(){
 
 function getCurrentData(){
 	var req = new XMLHttpRequest();
-	req.open('GET', "http://flip3.engr.oregonstate.edu:" + port + "/select", true);
+	req.open('GET', "http://flip2.engr.oregonstate.edu:" + port + "/select", true);
 	req.setRequestHeader('Content-Type', 'application/json');
 	req.addEventListener('load',function(){
 		var response = JSON.parse(req.responseText); // This gives us the response as a variable
@@ -104,7 +104,7 @@ function buildTable(data){
 
 function deleteRow(id){
 	var req = new XMLHttpRequest();
-	req.open('GET', "http://flip3.engr.oregonstate.edu:" + port + "/delete?id=" + id , true);
+	req.open('GET', "http://flip2.engr.oregonstate.edu:" + port + "/delete?id=" + id , true);
 	req.addEventListener('load',function(){
 		//delete and rebuild table
 		clearTable();
@@ -123,7 +123,7 @@ function editRow(id){
 	payload.date = document.getElementById("date"+id).textContent;
 	payload.lbs = document.getElementById("lbs"+id).textContent;; 
     var req = new XMLHttpRequest();
-    var url = "http://flip3.engr.oregonstate.edu:" + port + "/update?" + "name=" + payload.name + "&id=" + payload.id + "&reps=" + payload.reps + "&weight=" + payload.weight + "&date=" + payload.date + "&lbs=" + payload.lbs; 
+    var url = "http://flip2.engr.oregonstate.edu:" + port + "/update?" + "name=" + payload.name + "&id=" + payload.id + "&reps=" + payload.reps + "&weight=" + payload.weight + "&date=" + payload.date + "&lbs=" + payload.lbs; 
 	req.open('GET', url, true);
 	req.addEventListener('load',function(){
 		//delete and rebuild table
