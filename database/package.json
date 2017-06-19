@@ -1,19 +1,18 @@
 {
-  "name": "hello-world",
-  "version": "1.0.0",
-  "description": "Hello world with express and node.js",
-  "main": "app.js",
+  "name": "databaseui",
+  "version": "0.0.1",
+  "description": "database interaction",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "OSU",
-  "license": "ISC",
+  "author": "Robert Newton",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.13.3",
-    "express": "^4.13.2",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
-    "express-session": "^1.11.3",
-    "mysql": "^2.8.0",
-    "request": "^2.72.0"
+    "mysql": "^2.10.2"
   }
 }

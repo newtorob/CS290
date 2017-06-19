@@ -1,0 +1,24 @@
+{
+  "name": "databaseui",
+  "description": "database interaction",
+  "main": "server.js",
+  "authors": [
+    "Robert Newton"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/newtorob/CS290",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
