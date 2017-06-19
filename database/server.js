@@ -2,10 +2,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var pool = mysql.createPool({
-   host: 'localhost',
-   user: 'student',
-   password: 'default',
-   database: 'student'
+   host: 'mysql.cs.orst.edu',
+   user: 'cs290_newtorob',
+   password: '4180Stanky!',
+   database: 'cs290_newtorob'
 });
 
 pool.query("DROP TABLE IF EXISTS todo", function(err) {
