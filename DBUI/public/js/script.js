@@ -55,6 +55,7 @@ function getCurrentData(){
 };
 
 function buildTable(data){
+	if(obj === null) {return null}
     var fields = Object.keys(data[0]);
     var workoutTable = document.getElementById("workouts");
     data.forEach(function(object){
