@@ -1,48 +1,16 @@
-<h1>Exercise List App</h1>
-<p>Enter your exercise tasks below</p>
-<form class="form-horizontal post col-md-6">
-   <div class="form-group">
-      <label class="control-label col-sm-3">Name:</label>
-      <div class="col-sm-3">
-         <input class="name" type="text"/>
-      </div>
-   </div>
-   <div class="form-group">
-      <label class="control-label col-sm-3">Reps:</label>
-      <div class="col-sm-3">
-         <input class="rep" type="number"/>
-      </div>
-   </div>
-   <div class="form-group">
-      <label class="control-label col-sm-3">Weight:</label>
-      <div class="col-sm-3">
-         <input class="weight" type="number"/>
-      </div>
-   </div>
-   <div class="form-group">
-      <label class="control-label col-sm-3">Date:</label>
-      <div class="col-sm-3">
-         <input class="date" type="text"/>
-      </div>
-   </div>
-   <div class="form-group">
-      <label class="control-label col-sm-3">Units:</label>
-      <div class="col-sm-3">
-         <select class="units">
-            <option val="0">
-               kg
-            </option>
-            <option val="1">
-               lbs
-            </option>
-         </select>
-      </div>
-   </div>
-   <div class="form-group">
-      <div class="col-sm-3 col-sm-offset-2">
-         <button class="add-task btn btn-submit" type="submit">Submit</button>
-      </div>
-   </div>
+<h2>Update this exercise</h2>
+<form method ="POST">
+  <label for="exName">Name:</label>
+  <input id="exName" type="text" name="name" value="{{results.[0].name}}"">
+  <label for="exReps">Reps:</label>
+  <input id="exReps" type="text" name="reps" value={{results.[0].reps}}>
+  <label for="exWeight">Weight:</label>
+  <input id="exWeight" type="text" name="weight" value={{results.[0].weight}}>
+  <label for="exDate">Date:</label>
+  <input id="exDate" type="date" name="date" value={{results.[0].date}}>
+  <label for="unitCheckBox">lbs? (Leave unchecked for kg)</label>
+  <input id="unitCheckBox" type="checkbox" name="lbs" value="{{results.[0].lbs}}" {{checked}}>
+  <br/>
+  <input type="hidden" name="id" value={{results.[0].id}}>
+  <input id="add" type="submit" name="add" value="add">
 </form>
-<div class="editContainer col-sm-6"></div>
-<div class="col-md-12 tableContainer"></div> 
